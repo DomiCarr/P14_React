@@ -1,7 +1,7 @@
-import { Checkbox } from "./components/forms/Checkbox"
-import { Input } from "./components/forms/Input"
-import { ProductRow } from "./components/products/productrow"
-import { ProductCategoryRow } from "./components/products/ProductCategoryRow"
+import { Checkbox } from "../components/forms/Checkbox"
+import { Input } from "../components/forms/Input"
+import { ProductRow } from "../components/products/productrow"
+import { ProductCategoryRow } from "../components/products/ProductCategoryRow"
 import { useState } from "react"
 
 const PRODUCTS = [
