@@ -1,7 +1,4 @@
-import { useState } from "react"
-import { useIncrement } from "../components/hoocks/useIncrement"
-import { useDocumentTitle } from "../components/hoocks/useDocumentTitle"
-import { Input } from "../components/forms/Input.jsx"
+import { useFecth } from "../components/hoocks/useFetch.js"
 
 /**
  * Hoock personnalisés
@@ -12,13 +9,15 @@ import { Input } from "../components/forms/Input.jsx"
 
 function App() {
 
-    const { loading, data, errors } = useFecth('https://jsonplaceholder.typicode.com/posts?_limite=10&_delay=2000%27)')
+    const { loading, data, errors } = useFecth('https://jsonplaceholder.typicode.com/posts?_limite=10&_delay=3000%27)')
 
     return <div>
 
         {loading && <div>Chargement...</div>}
         {data && <div>
-            {JSON.stringify(data)}
+            <ul>
+                {data.map(post => (<li key={post.id}>{post.title}</li>))}
+            </ul>
         </div>}
     </div>
 
